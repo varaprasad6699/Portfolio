@@ -836,7 +836,13 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { padding: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.skill .title-wrapper::before {
+  content: "|";
+  color: var(--vegas-gold); /* change to any color you prefer */
+  font-weight: bold;
+}
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
@@ -853,7 +859,9 @@ main {
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
-
+.title-wrapper > h5{
+  width: max-content;
+}
 .skill-progress-bg {
   background: var(--jet);
   width: 100%;
